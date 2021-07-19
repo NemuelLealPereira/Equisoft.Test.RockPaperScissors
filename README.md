@@ -1,0 +1,1 @@
+# Equisoft.Test.RockPaperScissors
