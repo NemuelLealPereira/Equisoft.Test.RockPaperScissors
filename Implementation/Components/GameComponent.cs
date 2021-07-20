@@ -22,11 +22,7 @@ namespace Equisoft.Test.RockPaperScissors.Implementation.Components
 
         public Dictionary<Player, int> InitGame()
         {
-            Console.WriteLine("==========================================================================");
-            Console.WriteLine("====== Rock Paper Scissors game. Please choose the option to play ========");
-            Console.WriteLine("==========================================================================");
-
-            _helper.MultiplayerPanel();
+            _helper.WelcomeMultiplayerPanel();
 
             return _playerComponent.ChooseThePlayer(Console.ReadLine());
         }
@@ -70,17 +66,13 @@ namespace Equisoft.Test.RockPaperScissors.Implementation.Components
             Console.WriteLine("");
 
             if (players.First().Value == 3)
-            {
-                Console.WriteLine($"================================ Congratulations {players.First().Key.Name} ================================");
-            }
+                _helper.Congratulations(players.First().Key);
             else
-            {
-                Console.WriteLine($"================================ Congratulations {players.Last().Key.Name} ================================");
-            }
+                _helper.Congratulations(players.Last().Key);
 
             _helper.WinnerPainel();
             
             Console.ReadKey();
-        } 
+        }
     }
 }

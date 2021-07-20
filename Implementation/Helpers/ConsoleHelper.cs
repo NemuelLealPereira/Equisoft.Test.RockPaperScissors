@@ -6,15 +6,17 @@ namespace Equisoft.Test.RockPaperScissors.Implementation.Helper
 {
     public class ConsoleHelper : IConsoleHelper
     {
-        public void MultiplayerPanel()
+        public void WelcomeMultiplayerPanel()
         {
+            Console.WriteLine("==========================================================================");
+            Console.WriteLine("====== Rock Paper Scissors game. Please choose the option to play ========");
+            Console.WriteLine("==========================================================================");
+
             Console.WriteLine("");
             Console.WriteLine("1. Human vs Human");
             Console.WriteLine("2. Human vs Computer");
             Console.WriteLine("");
         }        
-
-        
 
         public void SectionSeparator()
         {
@@ -52,6 +54,11 @@ namespace Equisoft.Test.RockPaperScissors.Implementation.Helper
         public void PlayerNamePanel(string phrasePlayerNamePanel)
         {
             Console.WriteLine($"{Constants.PlayerName} {phrasePlayerNamePanel}"); 
+        }
+
+        public void Congratulations(Player player)
+        {
+            Console.WriteLine($"================================ Congratulations {player.Name} ================================");
         }
     }
 }

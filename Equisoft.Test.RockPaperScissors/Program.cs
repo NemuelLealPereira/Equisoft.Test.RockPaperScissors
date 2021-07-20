@@ -15,7 +15,6 @@ public class Program
 
     private static ServiceProvider Inicializer()
     {
-        //setup our DI
         return new ServiceCollection()
             .AddRockPaperScissorsDependenciesInjection()
             .BuildServiceProvider();
